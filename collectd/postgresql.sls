@@ -13,10 +13,9 @@ include:
     - watch_in:
       - service: collectd-service
     - defaults:
-        databases:
-            - host: {{ salt['pillar.get']('collectd:plugins:postgresql:host') }}
-              port: {{ salt['pillar.get']('collectd:plugins:postgresql:port') }}
-              user: {{ salt['pillar.get']('collectd:plugins:postgresql:user') }}
-              pass: {{ salt['pillar.get']('collectd:plugins:postgresql:pass') }}
-              name: {{ salt['pillar.get']('collectd:plugins:postgresql:name') }}
+        host: {{ salt['pillar.get']('collectd:plugins:postgresql:host') }}
+        port: {{ salt['pillar.get']('collectd:plugins:postgresql:port') }}
+        user: {{ salt['pillar.get']('collectd:plugins:postgresql:user') }}
+        pass: {{ salt['pillar.get']('collectd:plugins:postgresql:pass') }}
+        name: {{ salt['pillar.get']('collectd:plugins:postgresql:name') }}
         # MasterStats: {{ salt['pillar.get']('collectd:plugins:postgresql:MasterStats') }}
